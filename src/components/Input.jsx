@@ -35,7 +35,7 @@ function Input({
           className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none text-black"
         >
           {currencyOption.map((currency) => (
-            <option key={currency} value={currency.toUpperCase()}>
+            <option key={currency} value={currency}>
               {currency.toUpperCase()}
             </option>
           ))}
