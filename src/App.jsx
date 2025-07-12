@@ -3,10 +3,9 @@ import "./App.css";
 import Input from "./components/Input";
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
 function App() {
-  const [amount, setAmount] = useState(0);
-  const [convertedAmount, setConvertedAmount] = useState(0);
-  const [to, setTo] = useState("usd");
-  const [from, setFrom] = useState("inr");
+  const [amount, setAmount] = useState(1);
+  const [to, setTo] = useState("inr");
+  const [from, setFrom] = useState("usd");
   const currencyInfo = useCurrencyInfo(from);
   const options = Object.keys(currencyInfo);
   function swap() {
@@ -18,6 +17,7 @@ function App() {
   function convert() {
     setConvertedAmount(amount * currencyInfo[to]);
   }
+  const [convertedAmount, setConvertedAmount] = useState(85.69706558);
   console.log(options);
   return (
     <div
