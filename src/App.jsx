@@ -18,7 +18,7 @@ function App() {
     setConvertedAmount(amount * currencyInfo[to]);
   }
   const [convertedAmount, setConvertedAmount] = useState(85.69706558);
-  console.log(options);
+
   return (
     <div
       className="flex w-[100vw] justify-center items-center lg:bg-cover lg:bg-center  h-screen"

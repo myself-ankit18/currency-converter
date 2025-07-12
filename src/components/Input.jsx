@@ -1,4 +1,5 @@
 import React from "react";
+import useInfo from "../hooks/useInfo";
 
 function Input({
   label,
@@ -8,6 +9,13 @@ function Input({
   currencyOption = [],
   selectCurrency = "usd",
 }) {
+  const data = useInfo();
+  const keys = Object.keys(data);
+  const currencyArray = Object.entries(data).map(([code, { name, symbol }]) => ({
+  code,
+  name,
+  symbol,
+}));
   return (
     <div className="!bg-white p-3 rounded-lg text-sm flex">
       <div className="w-1/2">
@@ -34,11 +42,18 @@ function Input({
           onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
           className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none text-black"
         >
-          {currencyOption.map((currency) => (
-            <option key={currency} value={currency}>
-              {currency.toUpperCase()}
-            </option>
-          ))}
+          {currencyOption.map((currency) => {
+            const matched = currencyArray.find(
+              (code) => code.symbol === currency.toUpperCase()
+            );
+            const fullName = matched ? matched.name : "";
+
+            return (
+              <option className="max-w-16 lg:max-w-screen" key={currency} value={currency}>
+                {fullName} {currency.toUpperCase()}
+              </option>
+            );
+          })}
         </select>
       </div>
     </div>
