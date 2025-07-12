@@ -49,7 +49,7 @@ function App() {
         />
         <button
           onClick={convert}
-          className="!bg-blue-600 hover:!bg-blue-500 m-5"
+          className="!bg-blue-600 hover:!bg-blue-500 m-5 text-white"
         >
           Convert {from.toUpperCase()} to {to.toUpperCase()}
         </button>
