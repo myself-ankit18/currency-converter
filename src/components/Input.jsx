@@ -40,7 +40,7 @@ function Input({
           size={2}
           value={selectCurrency}
           onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
-          className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none text-black truncate w-full max-w-sm text-sm"
+          className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none text-black  w-full max-w-sm text-sm"
         >
           {currencyOption.map((currency) => {
             const matched = currencyArray.find(
