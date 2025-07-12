@@ -49,7 +49,7 @@ function Input({
             const fullName = matched ? matched.name : "";
 
             return (
-              <option className="" key={currency} value={currency}>
+              <option key={currency} value={currency}>
                 {fullName} {currency.toUpperCase()}
               </option>
             );

@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div
-      className="flex w-[100vw] justify-center items-center lg:bg-cover lg:bg-center  h-screen"
+      className="flex w-[100vw] overflow-hidden justify-center items-center lg:bg-cover lg:bg-center  h-screen"
       style={{ backgroundImage: "url('/d.jpg')" }}
     >
       <div className="w-fit bg-white/20 backdrop-blur-[4px] rounded-xl p-8 shadow-lg border border-white/30 flex justify-center flex-col gap-6  relative items-stretch max-w-sm md:max-w-md">
